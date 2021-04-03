@@ -8,6 +8,7 @@
     "deploy-localhost:L1ERC20": "hardhat deploy --tags L1ERC20 --network localhost_l1 --reset",
     "deploy-localhost:L2ERC20": "TARGET=ovm hardhat deploy --tags L2ERC20 --network localhost_l2 --reset",
     "deploy-localhost:L1ERC20Gateway": "hardhat deploy --tags L1ERC20Gateway --network localhost_l1 --reset",
+    "deploy-localhost:initialize-L2ERC20": "hardhat run scripts/L2ERC20.initialize.ts --network localhost",
     "test-bridge-localhost": "hardhat run scripts/test-bridge-localhost.ts --network localhost"
   },
   "dependencies": {

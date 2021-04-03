@@ -8,8 +8,8 @@
     "gasLimit": 8999999,
     "l1MessengerAddress": "0x6418E5Da52A3d7543d393ADD3Fa98B0795d27736",
     "l2MessengerAddress": "0x4200000000000000000000000000000000000007",
-    "l1ERC20Address": "0xa90220073288e02b20b32be88a04e44ab1c67b64",
-    "l1ERC20GatewayAddress": "0x2b57c4ab6d64a2befcb67d46bdc302809418bd1c",
-    "l2ERC20Address": "0x9f800770150c79d2165dfd44750d30e973445249"
+    "l1ERC20Address": "0xa94ec9484bfc9ab8d3fd80eb2735f132d257a135",
+    "l1ERC20GatewayAddress": "0xdcc6a1eb6ec0dab3813a485f36288e7e731dd0da",
+    "l2ERC20Address": "0x754aba7ae85de79c67288957a4cbf184b210b4a1"
   }
 }
