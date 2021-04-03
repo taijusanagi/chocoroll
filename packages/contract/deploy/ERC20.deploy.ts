@@ -20,7 +20,7 @@ const func = async (hre) => {
     gasLimit,
     log,
   });
-  networks[name].erc20Address = address;
+  networks[name].erc20Address = address.toLowerCase();
   fs.writeFileSync(path.join(__dirname, filePath), JSON.stringify(networks));
 };
 func.tags = ["ERC20"];

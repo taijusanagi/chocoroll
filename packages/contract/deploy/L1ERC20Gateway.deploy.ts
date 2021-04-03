@@ -2,7 +2,6 @@ import * as fs from "fs";
 import * as path from "path";
 
 import { LOG } from "../helpers/configs";
-import { ERC20_NAME, ERC20_SYMBOL } from "../helpers/constants";
 export const filePath = "../networks.json";
 import networks from "../networks.json";
 
@@ -24,7 +23,7 @@ const func = async (hre) => {
     gasLimit,
     log,
   });
-  networks[name].erc20GatewayAddress = address;
+  networks[name].erc20GatewayAddress = address.toLowerCase();
   fs.writeFileSync(path.join(__dirname, filePath), JSON.stringify(networks));
 };
 
