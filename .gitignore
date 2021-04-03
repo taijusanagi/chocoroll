@@ -115,15 +115,16 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# hardhat
 
-packages/hardhat/artifacts-ovm
-packages/hardhat/cache-ovm
-packages/hardhat/artifacts
-packages/hardhat/cache
-packages/hardhat/node_modules
-packages/hardhat/typechain
-packages/hardhat/coverage.json
+docker/optimism-integration/**
+
+packages/contract/artifacts-ovm
+packages/contract/cache-ovm
+packages/contract/artifacts
+packages/contract/cache
+packages/contract/node_modules
+packages/contract/typechain
+packages/contract/coverage.json
 
 # misc
 .DS_Store

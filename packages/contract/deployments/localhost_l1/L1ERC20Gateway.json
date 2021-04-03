@@ -1,0 +1,296 @@
+{
+  "address": "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract iOVM_ERC20",
+          "name": "_l1ERC20",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_l2DepositedERC20",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_l1messenger",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "DepositInitiated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "WithdrawalFinalized",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "DEFAULT_FINALIZE_DEPOSIT_L2_GAS",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "depositTo",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "finalizeWithdrawal",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getFinalizeDepositL2Gas",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "l1ERC20",
+      "outputs": [
+        {
+          "internalType": "contract iOVM_ERC20",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "l2DepositedToken",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "messenger",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x0f9e9978df3c64714bfdadcc2325a3e8092c31055918f1f893c8527e0e628474",
+  "receipt": {
+    "to": null,
+    "from": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "contractAddress": "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318",
+    "transactionIndex": 0,
+    "gasUsed": "742040",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xe26a392519a50bcc976dad92dcc47b51c2d2726ef99ec07865999ffa1a833b48",
+    "transactionHash": "0x0f9e9978df3c64714bfdadcc2325a3e8092c31055918f1f893c8527e0e628474",
+    "logs": [],
+    "blockNumber": 71,
+    "cumulativeGasUsed": "742040",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x0165878A594ca255338adfa4d48449f69242Eb8F",
+    "0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6",
+    "0x6418E5Da52A3d7543d393ADD3Fa98B0795d27736"
+  ],
+  "solcInputHash": "0f563c74dfc44f7aa33e02a3f01e2f82",
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract iOVM_ERC20\",\"name\":\"_l1ERC20\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_l2DepositedERC20\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_l1messenger\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"DepositInitiated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"WithdrawalFinalized\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEFAULT_FINALIZE_DEPOSIT_L2_GAS\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"depositTo\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"finalizeWithdrawal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getFinalizeDepositL2Gas\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"l1ERC20\",\"outputs\":[{\"internalType\":\"contract iOVM_ERC20\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"l2DepositedToken\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"messenger\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"deposit(uint256)\":{\"details\":\"deposit an amount of the ERC20 to the caller's balance on L2\",\"params\":{\"_amount\":\"Amount of the ERC20 to deposit\"}},\"depositTo(address,uint256)\":{\"details\":\"deposit an amount of ERC20 to a recipients's balance on L2\",\"params\":{\"_amount\":\"Amount of the ERC20 to deposit\",\"_to\":\"L2 address to credit the withdrawal to\"}},\"finalizeWithdrawal(address,uint256)\":{\"details\":\"Complete a withdrawal from L2 to L1, and credit funds to the recipient's balance of the  L1 ERC20 token.  This call will fail if the initialized withdrawal from L2 has not been finalized. \",\"params\":{\"_amount\":\"Amount of the ERC20 to withdraw\",\"_to\":\"L1 address to credit the withdrawal to\"}},\"getFinalizeDepositL2Gas()\":{\"details\":\"Overridable getter for the L2 gas limit, in the case it may be dynamic, and the above public constant does not suffice.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/L1ERC20Gateway.sol\":\"L1ERC20Gateway\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@eth-optimism/contracts/build/contracts/OVM/bridge/tokens/Abs_L1TokenGateway.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// @unsupported: ovm \\npragma solidity >0.5.0 <0.8.0;\\npragma experimental ABIEncoderV2;\\n\\n/* Interface Imports */\\nimport { iOVM_L1TokenGateway } from \\\"../../../iOVM/bridge/tokens/iOVM_L1TokenGateway.sol\\\";\\nimport { iOVM_L2DepositedToken } from \\\"../../../iOVM/bridge/tokens/iOVM_L2DepositedToken.sol\\\";\\n\\n/* Library Imports */\\nimport { OVM_CrossDomainEnabled } from \\\"../../../libraries/bridge/OVM_CrossDomainEnabled.sol\\\";\\n\\n/**\\n * @title Abs_L1TokenGateway\\n * @dev An L1 Token Gateway is a contract which stores deposited L1 funds that are in use on L2.\\n * It synchronizes a corresponding L2 representation of the \\\"deposited token\\\", informing it\\n * of new deposits and releasing L1 funds when there are newly finalized withdrawals.\\n *\\n * NOTE: This abstract contract gives all the core functionality of an L1 token gateway, \\n * but provides easy hooks in case developers need extensions in child contracts.\\n * In many cases, the default OVM_L1ERC20Gateway will suffice.\\n *\\n * Compiler used: solc\\n * Runtime target: EVM\\n */\\nabstract contract Abs_L1TokenGateway is iOVM_L1TokenGateway, OVM_CrossDomainEnabled {\\n\\n    /********************************\\n     * External Contract References *\\n     ********************************/\\n\\n    address public l2DepositedToken;\\n\\n    /***************\\n     * Constructor *\\n     ***************/\\n\\n    /**\\n     * @param _l2DepositedToken iOVM_L2DepositedToken-compatible address on the chain being deposited into.\\n     * @param _l1messenger L1 Messenger address being used for cross-chain communications.\\n     */\\n    constructor(\\n        address _l2DepositedToken,\\n        address _l1messenger \\n    )\\n        OVM_CrossDomainEnabled(_l1messenger)\\n    {\\n        l2DepositedToken = _l2DepositedToken;\\n    }\\n\\n    /********************************\\n     * Overridable Accounting logic *\\n     ********************************/\\n\\n    // Default gas value which can be overridden if more complex logic runs on L2.\\n    uint32 public DEFAULT_FINALIZE_DEPOSIT_L2_GAS = 1200000;\\n\\n    /**\\n     * @dev Core logic to be performed when a withdrawal is finalized on L1.\\n     * In most cases, this will simply send locked funds to the withdrawer.\\n     *\\n     * @param _to Address being withdrawn to.\\n     * @param _amount Amount being withdrawn.\\n     */\\n    function _handleFinalizeWithdrawal(\\n        address _to,\\n        uint256 _amount\\n    )\\n        internal\\n        virtual\\n    {\\n        revert(\\\"Implement me in child contracts\\\");\\n    }\\n\\n    /**\\n     * @dev Core logic to be performed when a deposit is initiated on L1.\\n     * In most cases, this will simply send locked funds to the withdrawer.\\n     *\\n     * @param _from Address being deposited from on L1.\\n     * @param _to Address being deposited into on L2.\\n     * @param _amount Amount being deposited.\\n     */\\n    function _handleInitiateDeposit(\\n        address _from,\\n        address _to,\\n        uint256 _amount\\n    )\\n        internal\\n        virtual\\n    {\\n        revert(\\\"Implement me in child contracts\\\");\\n    }\\n\\n    /**\\n     * @dev Overridable getter for the L2 gas limit, in the case it may be\\n     * dynamic, and the above public constant does not suffice.\\n     *\\n     */\\n\\n    function getFinalizeDepositL2Gas()\\n        public\\n        view\\n        returns(\\n            uint32\\n        )\\n    {\\n        return DEFAULT_FINALIZE_DEPOSIT_L2_GAS;\\n    }\\n\\n    /**************\\n     * Depositing *\\n     **************/\\n\\n    /**\\n     * @dev deposit an amount of the ERC20 to the caller's balance on L2\\n     * @param _amount Amount of the ERC20 to deposit\\n     */\\n    function deposit(\\n        uint _amount\\n    )\\n        public\\n        override\\n    {\\n        _initiateDeposit(msg.sender, msg.sender, _amount);\\n    }\\n\\n    /**\\n     * @dev deposit an amount of ERC20 to a recipients's balance on L2\\n     * @param _to L2 address to credit the withdrawal to\\n     * @param _amount Amount of the ERC20 to deposit\\n     */\\n    function depositTo(\\n        address _to,\\n        uint _amount\\n    )\\n        public\\n        override\\n    {\\n        _initiateDeposit(msg.sender, _to, _amount);\\n    }\\n\\n    /**\\n     * @dev Performs the logic for deposits by informing the L2 Deposited Token\\n     * contract of the deposit and calling a handler to lock the L1 funds. (e.g. transferFrom)\\n     *\\n     * @param _from Account to pull the deposit from on L1\\n     * @param _to Account to give the deposit to on L2\\n     * @param _amount Amount of the ERC20 to deposit.\\n     */\\n    function _initiateDeposit(\\n        address _from,\\n        address _to,\\n        uint _amount\\n    )\\n        internal\\n    {\\n        // Call our deposit accounting handler implemented by child contracts.\\n        _handleInitiateDeposit(\\n            _from,\\n            _to,\\n            _amount\\n        );\\n\\n        // Construct calldata for l2DepositedToken.finalizeDeposit(_to, _amount)\\n        bytes memory data = abi.encodeWithSelector(\\n            iOVM_L2DepositedToken.finalizeDeposit.selector,\\n            _to,\\n            _amount\\n        );\\n\\n        // Send calldata into L2\\n        sendCrossDomainMessage(\\n            l2DepositedToken,\\n            data,\\n            getFinalizeDepositL2Gas()\\n        );\\n\\n        emit DepositInitiated(_from, _to, _amount);\\n    }\\n\\n    /*************************\\n     * Cross-chain Functions *\\n     *************************/\\n\\n    /**\\n     * @dev Complete a withdrawal from L2 to L1, and credit funds to the recipient's balance of the \\n     * L1 ERC20 token. \\n     * This call will fail if the initialized withdrawal from L2 has not been finalized. \\n     *\\n     * @param _to L1 address to credit the withdrawal to\\n     * @param _amount Amount of the ERC20 to withdraw\\n     */\\n    function finalizeWithdrawal(\\n        address _to,\\n        uint _amount\\n    )\\n        external\\n        override \\n        onlyFromCrossDomainAccount(l2DepositedToken)\\n    {\\n        // Call our withdrawal accounting handler implemented by child contracts.\\n        _handleFinalizeWithdrawal(\\n            _to,\\n            _amount\\n        );\\n\\n        emit WithdrawalFinalized(_to, _amount);\\n    }\\n}\\n\",\"keccak256\":\"0xd7403fed1cab3089e669b61a8d3bb81ff1601a8890c06bb0dbd881592b941e68\",\"license\":\"MIT\"},\"@eth-optimism/contracts/build/contracts/OVM/bridge/tokens/OVM_L1ERC20Gateway.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// @unsupported: ovm \\npragma solidity >0.5.0 <0.8.0;\\npragma experimental ABIEncoderV2;\\n\\n/* Interface Imports */\\nimport { iOVM_L1TokenGateway } from \\\"../../../iOVM/bridge/tokens/iOVM_L1TokenGateway.sol\\\";\\nimport { Abs_L1TokenGateway } from \\\"./Abs_L1TokenGateway.sol\\\";\\nimport { iOVM_ERC20 } from \\\"../../../iOVM/precompiles/iOVM_ERC20.sol\\\";\\n\\n/**\\n * @title OVM_L1ERC20Gateway\\n * @dev The L1 ERC20 Gateway is a contract which stores deposited L1 funds that are in use on L2.\\n * It synchronizes a corresponding L2 ERC20 Gateway, informing it of deposits, and listening to it\\n * for newly finalized withdrawals.\\n *\\n * NOTE: This contract extends Abs_L1TokenGateway, which is where we\\n * takes care of most of the initialization and the cross-chain logic.\\n * If you are looking to implement your own deposit/withdrawal contracts, you\\n * may also want to extend the abstract contract in a similar manner.\\n *\\n * Compiler used: solc\\n * Runtime target: EVM\\n */\\ncontract OVM_L1ERC20Gateway is Abs_L1TokenGateway {\\n\\n    /********************************\\n     * External Contract References *\\n     ********************************/\\n    \\n    iOVM_ERC20 public l1ERC20;\\n\\n    /***************\\n     * Constructor *\\n     ***************/\\n\\n    /**\\n     * @param _l1ERC20 L1 ERC20 address this contract stores deposits for\\n     * @param _l2DepositedERC20 L2 Gateway address on the chain being deposited into\\n     */\\n    constructor(\\n        iOVM_ERC20 _l1ERC20,\\n        address _l2DepositedERC20,\\n        address _l1messenger \\n    )\\n        Abs_L1TokenGateway(\\n            _l2DepositedERC20,\\n            _l1messenger\\n        )\\n    {\\n        l1ERC20 = _l1ERC20;\\n    }\\n\\n\\n    /**************\\n     * Accounting *\\n     **************/\\n\\n    /**\\n     * @dev When a deposit is initiated on L1, the L1 Gateway\\n     * transfers the funds to itself for future withdrawals\\n     *\\n     * @param _from L1 address ETH is being deposited from\\n     * @param _to L2 address that the ETH is being deposited to\\n     * @param _amount Amount of ERC20 to send\\n     */\\n    function _handleInitiateDeposit(\\n        address _from,\\n        address _to,\\n        uint256 _amount\\n    )\\n        internal\\n        override\\n    {\\n         // Hold on to the newly deposited funds\\n        l1ERC20.transferFrom(\\n            _from,\\n            address(this),\\n            _amount\\n        );\\n    }\\n\\n    /**\\n     * @dev When a withdrawal is finalized on L1, the L1 Gateway\\n     * transfers the funds to the withdrawer\\n     *\\n     * @param _to L1 address that the ERC20 is being withdrawn to\\n     * @param _amount Amount of ERC20 to send\\n     */\\n    function _handleFinalizeWithdrawal(\\n        address _to,\\n        uint _amount\\n    )\\n        internal\\n        override\\n    {\\n        // Transfer withdrawn funds out to withdrawer\\n        l1ERC20.transfer(_to, _amount);\\n    }\\n}\\n\",\"keccak256\":\"0x6c63e5dd1ec4ff508d5ba511a89caffc9316b5a06bf1da9fe0cffab38c1b242e\",\"license\":\"MIT\"},\"@eth-optimism/contracts/build/contracts/iOVM/bridge/messaging/iAbs_BaseCrossDomainMessenger.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity >0.5.0 <0.8.0;\\npragma experimental ABIEncoderV2;\\n\\n/**\\n * @title iAbs_BaseCrossDomainMessenger\\n */\\ninterface iAbs_BaseCrossDomainMessenger {\\n\\n    /**********\\n     * Events *\\n     **********/\\n    event SentMessage(bytes message);\\n    event RelayedMessage(bytes32 msgHash);\\n\\n    /**********************\\n     * Contract Variables *\\n     **********************/\\n    function xDomainMessageSender() external view returns (address);\\n\\n    /********************\\n     * Public Functions *\\n     ********************/\\n\\n    /**\\n     * Sends a cross domain message to the target messenger.\\n     * @param _target Target contract address.\\n     * @param _message Message to send to the target.\\n     * @param _gasLimit Gas limit for the provided message.\\n     */\\n    function sendMessage(\\n        address _target,\\n        bytes calldata _message,\\n        uint32 _gasLimit\\n    ) external;\\n}\\n\",\"keccak256\":\"0xc2bd6b373daae2ede34281f4be5938d02b9d1cfb056b40d65ff70b7f16ce3c86\",\"license\":\"MIT\"},\"@eth-optimism/contracts/build/contracts/iOVM/bridge/tokens/iOVM_L1TokenGateway.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity >0.5.0;\\npragma experimental ABIEncoderV2;\\n\\n/**\\n * @title iOVM_L1TokenGateway\\n */\\ninterface iOVM_L1TokenGateway {\\n\\n    /**********\\n     * Events *\\n     **********/\\n\\n    event DepositInitiated(\\n        address indexed _from,\\n        address _to,\\n        uint256 _amount\\n    );\\n  \\n    event WithdrawalFinalized(\\n        address indexed _to,\\n        uint256 _amount\\n    );\\n\\n\\n    /********************\\n     * Public Functions *\\n     ********************/\\n\\n    function deposit(\\n        uint _amount\\n    )\\n        external;\\n\\n    function depositTo(\\n        address _to,\\n        uint _amount\\n    )\\n        external;\\n\\n\\n    /*************************\\n     * Cross-chain Functions *\\n     *************************/\\n\\n    function finalizeWithdrawal(\\n        address _to,\\n        uint _amount\\n    )\\n        external;\\n}\\n\",\"keccak256\":\"0xc5503d644d170daa5b46a1228f5c73ef6d068226a2b2acc62d41df00c36b900e\",\"license\":\"MIT\"},\"@eth-optimism/contracts/build/contracts/iOVM/bridge/tokens/iOVM_L2DepositedToken.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity >0.5.0;\\npragma experimental ABIEncoderV2;\\n\\n/**\\n * @title iOVM_L2DepositedToken\\n */\\ninterface iOVM_L2DepositedToken {\\n\\n    /**********\\n     * Events *\\n     **********/\\n\\n    event WithdrawalInitiated(\\n        address indexed _from,\\n        address _to,\\n        uint256 _amount\\n    );\\n\\n    event DepositFinalized(\\n        address indexed _to,\\n        uint256 _amount\\n    );    \\n\\n\\n    /********************\\n     * Public Functions *\\n     ********************/\\n\\n    function withdraw(\\n        uint _amount\\n    )\\n        external;\\n\\n    function withdrawTo(\\n        address _to,\\n        uint _amount\\n    )\\n        external;\\n\\n\\n    /*************************\\n     * Cross-chain Functions *\\n     *************************/\\n\\n    function finalizeDeposit(\\n        address _to,\\n        uint _amount\\n    )\\n        external;\\n}\\n\",\"keccak256\":\"0xaa874355e98c444a58712179acaf5ca344296dfa8229577a38a1d14160ce46f8\",\"license\":\"MIT\"},\"@eth-optimism/contracts/build/contracts/iOVM/precompiles/iOVM_ERC20.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity >0.5.0 <0.8.0;\\n\\n/**\\n * @title iOVM_ERC20\\n */\\ninterface iOVM_ERC20 {\\n    /* This is a slight change to the ERC20 base standard.\\n    function totalSupply() constant returns (uint256 supply);\\n    is replaced with:\\n    uint256 public totalSupply;\\n    This automatically creates a getter function for the totalSupply.\\n    This is moved to the base contract since public getter functions are not\\n    currently recognised as an implementation of the matching abstract\\n    function by the compiler.\\n    */\\n    /// total amount of tokens\\n    function totalSupply() external view returns (uint256);\\n\\n    /// @param _owner The address from which the balance will be retrieved\\n    /// @return balance The balance\\n    function balanceOf(address _owner) external view returns (uint256 balance);\\n\\n    /// @notice send `_value` token to `_to` from `msg.sender`\\n    /// @param _to The address of the recipient\\n    /// @param _value The amount of token to be transferred\\n    /// @return success Whether the transfer was successful or not\\n    function transfer(address _to, uint256 _value) external returns (bool success);\\n\\n    /// @notice send `_value` token to `_to` from `_from` on the condition it is approved by `_from`\\n    /// @param _from The address of the sender\\n    /// @param _to The address of the recipient\\n    /// @param _value The amount of token to be transferred\\n    /// @return success Whether the transfer was successful or not\\n    function transferFrom(address _from, address _to, uint256 _value) external returns (bool success);\\n\\n    /// @notice `msg.sender` approves `_spender` to spend `_value` tokens\\n    /// @param _spender The address of the account able to transfer the tokens\\n    /// @param _value The amount of tokens to be approved for transfer\\n    /// @return success Whether the approval was successful or not\\n    function approve(address _spender, uint256 _value) external returns (bool success);\\n\\n    /// @param _owner The address of the account owning tokens\\n    /// @param _spender The address of the account able to transfer the tokens\\n    /// @return remaining Amount of remaining tokens allowed to spent\\n    function allowance(address _owner, address _spender) external view returns (uint256 remaining);\\n\\n    // solhint-disable-next-line no-simple-event-func-name\\n    event Transfer(address indexed _from, address indexed _to, uint256 _value);\\n    event Approval(address indexed _owner, address indexed _spender, uint256 _value);\\n    event Mint(address indexed _account, uint256 _amount);\\n    event Burn(address indexed _account, uint256 _amount);\\n}\\n\",\"keccak256\":\"0x19917cf9b071ddd83bfe5043f1e09c25a7e941d99c5b6bea5375be1d6d809e0f\",\"license\":\"MIT\"},\"@eth-optimism/contracts/build/contracts/libraries/bridge/OVM_CrossDomainEnabled.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity >0.5.0 <0.8.0;\\n/* Interface Imports */\\nimport { iAbs_BaseCrossDomainMessenger } from \\\"../../iOVM/bridge/messaging/iAbs_BaseCrossDomainMessenger.sol\\\";\\n\\n/**\\n * @title OVM_CrossDomainEnabled\\n * @dev Helper contract for contracts performing cross-domain communications\\n *\\n * Compiler used: defined by inheriting contract\\n * Runtime target: defined by inheriting contract\\n */\\ncontract OVM_CrossDomainEnabled {\\n    // Messenger contract used to send and recieve messages from the other domain.\\n    address public messenger;\\n\\n    /***************\\n     * Constructor *\\n     ***************/    \\n    constructor(\\n        address _messenger\\n    ) {\\n        messenger = _messenger;\\n    }\\n\\n    /**********************\\n     * Function Modifiers *\\n     **********************/\\n\\n    /**\\n     * @notice Enforces that the modified function is only callable by a specific cross-domain account.\\n     * @param _sourceDomainAccount The only account on the originating domain which is authenticated to call this function.\\n     */\\n    modifier onlyFromCrossDomainAccount(\\n        address _sourceDomainAccount\\n    ) {\\n        require(\\n            msg.sender == address(getCrossDomainMessenger()),\\n            \\\"OVM_XCHAIN: messenger contract unauthenticated\\\"\\n        );\\n\\n        require(\\n            getCrossDomainMessenger().xDomainMessageSender() == _sourceDomainAccount,\\n            \\\"OVM_XCHAIN: wrong sender of cross-domain message\\\"\\n        );\\n\\n        _;\\n    }\\n    \\n    /**********************\\n     * Internal Functions *\\n     **********************/\\n\\n    /**\\n     * @notice Gets the messenger, usually from storage.  This function is exposed in case a child contract needs to override.\\n     * @return The address of the cross-domain messenger contract which should be used. \\n     */\\n    function getCrossDomainMessenger()\\n        internal\\n        virtual\\n        returns(\\n            iAbs_BaseCrossDomainMessenger\\n        )\\n    {\\n        return iAbs_BaseCrossDomainMessenger(messenger);\\n    }\\n\\n    /**\\n     * @notice Sends a message to an account on another domain\\n     * @param _crossDomainTarget The intended recipient on the destination domain\\n     * @param _data The data to send to the target (usually calldata to a function with `onlyFromCrossDomainAccount()`)\\n     * @param _gasLimit The gasLimit for the receipt of the message on the target domain.\\n     */\\n    function sendCrossDomainMessage(\\n        address _crossDomainTarget,\\n        bytes memory _data,\\n        uint32 _gasLimit\\n    ) internal {\\n        getCrossDomainMessenger().sendMessage(_crossDomainTarget, _data, _gasLimit);\\n    }\\n}\\n\",\"keccak256\":\"0x1b1c5adbb359f3f46ca9e43b366a80563c031560e9f1f24ab4742b2d79403ce7\",\"license\":\"MIT\"},\"contracts/L1ERC20Gateway.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// @unsupported: ovm\\npragma solidity >0.5.0 <0.8.0;\\npragma experimental ABIEncoderV2;\\n\\nimport {OVM_L1ERC20Gateway} from \\\"@eth-optimism/contracts/build/contracts/OVM/bridge/tokens/OVM_L1ERC20Gateway.sol\\\";\\nimport {iOVM_ERC20} from \\\"@eth-optimism/contracts/build/contracts/iOVM/precompiles/iOVM_ERC20.sol\\\";\\n\\ncontract L1ERC20Gateway is OVM_L1ERC20Gateway {\\n    constructor(\\n        iOVM_ERC20 _l1ERC20,\\n        address _l2DepositedERC20,\\n        address _l1messenger\\n    ) OVM_L1ERC20Gateway(_l1ERC20, _l2DepositedERC20, _l1messenger) {}\\n}\\n\",\"keccak256\":\"0xaee29ca0ef6195676a11927387b6cffb31ef7f86066f2e7d7df7f36216ee8f8b\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405262124f80600160146101000a81548163ffffffff021916908363ffffffff1602179055503480156200003557600080fd5b5060405162000d6338038062000d6383398181016040528101906200005b919062000160565b828282818180806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505081600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505082600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050505050505062000232565b6000815190506200014381620001fe565b92915050565b6000815190506200015a8162000218565b92915050565b6000806000606084860312156200017657600080fd5b6000620001868682870162000149565b9350506020620001998682870162000132565b9250506040620001ac8682870162000132565b9150509250925092565b6000620001c382620001de565b9050919050565b6000620001d782620001b6565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6200020981620001b6565b81146200021557600080fd5b50565b6200022381620001ca565b81146200022f57600080fd5b50565b610b2180620002426000396000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c80639423169b1161005b5780639423169b14610105578063b6b55f2514610123578063f4f7b41a1461013f578063ffaad6a51461015b57610088565b80630439f40b1461008d5780631273a090146100ab57806332b5e32e146100c95780633cb747bf146100e7575b600080fd5b610095610177565b6040516100a29190610900565b60405180910390f35b6100b361019d565b6040516100c091906109b1565b60405180910390f35b6100d16101b7565b6040516100de919061097b565b60405180910390f35b6100ef6101dd565b6040516100fc9190610900565b60405180910390f35b61010d610201565b60405161011a91906109b1565b60405180910390f35b61013d6004803603810190610138919061089b565b610217565b005b61015960048036038101906101549190610836565b610225565b005b61017560048036038101906101709190610836565b61043b565b005b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000600160149054906101000a900463ffffffff16905090565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600160149054906101000a900463ffffffff1681565b61022233338361044a565b50565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1661025061055b565b73ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146102d3576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602e815260200180610a8e602e913960400191505060405180910390fd5b8073ffffffffffffffffffffffffffffffffffffffff166102f261055b565b73ffffffffffffffffffffffffffffffffffffffff16636e296e456040518163ffffffff1660e01b815260040160206040518083038186803b15801561033757600080fd5b505afa15801561034b573d6000803e3d6000fd5b505050506040513d602081101561036157600080fd5b810190808051906020019092919050505073ffffffffffffffffffffffffffffffffffffffff16146103de576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526030815260200180610abc6030913960400191505060405180910390fd5b6103e88383610584565b8273ffffffffffffffffffffffffffffffffffffffff167f9e5c4f9f4e46b8629d3dda85f43a69194f50254404a72dc62b9e932d9c94eda88360405161042e9190610996565b60405180910390a2505050565b61044633838361044a565b5050565b610455838383610638565b6000638d6e9a5b60e01b8383604051602401610472929190610952565b604051602081830303815290604052907bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19166020820180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff83818316178352505050509050610505600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168261050061019d565b6106ef565b8373ffffffffffffffffffffffffffffffffffffffff167ff531653a5819e21265de50358610d55dbe6594c61605b209dfa4280d277938c1848460405161054d929190610952565b60405180910390a250505050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb83836040518363ffffffff1660e01b81526004016105e1929190610952565b602060405180830381600087803b1580156105fb57600080fd5b505af115801561060f573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106339190610872565b505050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166323b872dd8430846040518463ffffffff1660e01b81526004016106979392919061091b565b602060405180830381600087803b1580156106b157600080fd5b505af11580156106c5573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106e99190610872565b50505050565b6106f761055b565b73ffffffffffffffffffffffffffffffffffffffff16633dbb202b8484846040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff168152602001806020018363ffffffff168152602001828103825284818151815260200191508051906020019080838360005b8381101561078c578082015181840152602081019050610771565b50505050905090810190601f1680156107b95780820380516001836020036101000a031916815260200191505b50945050505050600060405180830381600087803b1580156107da57600080fd5b505af11580156107ee573d6000803e3d6000fd5b50505050505050565b60008135905061080681610a48565b92915050565b60008151905061081b81610a5f565b92915050565b60008135905061083081610a76565b92915050565b6000806040838503121561084957600080fd5b6000610857858286016107f7565b925050602061086885828601610821565b9150509250929050565b60006020828403121561088457600080fd5b60006108928482850161080c565b91505092915050565b6000602082840312156108ad57600080fd5b60006108bb84828501610821565b91505092915050565b6108cd816109cc565b82525050565b6108dc81610a24565b82525050565b6108eb81610a0a565b82525050565b6108fa81610a14565b82525050565b600060208201905061091560008301846108c4565b92915050565b600060608201905061093060008301866108c4565b61093d60208301856108c4565b61094a60408301846108e2565b949350505050565b600060408201905061096760008301856108c4565b61097460208301846108e2565b9392505050565b600060208201905061099060008301846108d3565b92915050565b60006020820190506109ab60008301846108e2565b92915050565b60006020820190506109c660008301846108f1565b92915050565b60006109d7826109ea565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b600063ffffffff82169050919050565b6000610a2f82610a36565b9050919050565b6000610a41826109ea565b9050919050565b610a51816109cc565b8114610a5c57600080fd5b50565b610a68816109de565b8114610a7357600080fd5b50565b610a7f81610a0a565b8114610a8a57600080fd5b5056fe4f564d5f58434841494e3a206d657373656e67657220636f6e747261637420756e61757468656e746963617465644f564d5f58434841494e3a2077726f6e672073656e646572206f662063726f73732d646f6d61696e206d657373616765a2646970667358221220670d4c99ba8391ff01054cd3ac0a6e3c8afdf6ef429b5d5b4e5954d0cf228eac64736f6c63430007060033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100885760003560e01c80639423169b1161005b5780639423169b14610105578063b6b55f2514610123578063f4f7b41a1461013f578063ffaad6a51461015b57610088565b80630439f40b1461008d5780631273a090146100ab57806332b5e32e146100c95780633cb747bf146100e7575b600080fd5b610095610177565b6040516100a29190610900565b60405180910390f35b6100b361019d565b6040516100c091906109b1565b60405180910390f35b6100d16101b7565b6040516100de919061097b565b60405180910390f35b6100ef6101dd565b6040516100fc9190610900565b60405180910390f35b61010d610201565b60405161011a91906109b1565b60405180910390f35b61013d6004803603810190610138919061089b565b610217565b005b61015960048036038101906101549190610836565b610225565b005b61017560048036038101906101709190610836565b61043b565b005b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000600160149054906101000a900463ffffffff16905090565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600160149054906101000a900463ffffffff1681565b61022233338361044a565b50565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1661025061055b565b73ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146102d3576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602e815260200180610a8e602e913960400191505060405180910390fd5b8073ffffffffffffffffffffffffffffffffffffffff166102f261055b565b73ffffffffffffffffffffffffffffffffffffffff16636e296e456040518163ffffffff1660e01b815260040160206040518083038186803b15801561033757600080fd5b505afa15801561034b573d6000803e3d6000fd5b505050506040513d602081101561036157600080fd5b810190808051906020019092919050505073ffffffffffffffffffffffffffffffffffffffff16146103de576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526030815260200180610abc6030913960400191505060405180910390fd5b6103e88383610584565b8273ffffffffffffffffffffffffffffffffffffffff167f9e5c4f9f4e46b8629d3dda85f43a69194f50254404a72dc62b9e932d9c94eda88360405161042e9190610996565b60405180910390a2505050565b61044633838361044a565b5050565b610455838383610638565b6000638d6e9a5b60e01b8383604051602401610472929190610952565b604051602081830303815290604052907bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19166020820180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff83818316178352505050509050610505600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168261050061019d565b6106ef565b8373ffffffffffffffffffffffffffffffffffffffff167ff531653a5819e21265de50358610d55dbe6594c61605b209dfa4280d277938c1848460405161054d929190610952565b60405180910390a250505050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb83836040518363ffffffff1660e01b81526004016105e1929190610952565b602060405180830381600087803b1580156105fb57600080fd5b505af115801561060f573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106339190610872565b505050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166323b872dd8430846040518463ffffffff1660e01b81526004016106979392919061091b565b602060405180830381600087803b1580156106b157600080fd5b505af11580156106c5573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106e99190610872565b50505050565b6106f761055b565b73ffffffffffffffffffffffffffffffffffffffff16633dbb202b8484846040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff168152602001806020018363ffffffff168152602001828103825284818151815260200191508051906020019080838360005b8381101561078c578082015181840152602081019050610771565b50505050905090810190601f1680156107b95780820380516001836020036101000a031916815260200191505b50945050505050600060405180830381600087803b1580156107da57600080fd5b505af11580156107ee573d6000803e3d6000fd5b50505050505050565b60008135905061080681610a48565b92915050565b60008151905061081b81610a5f565b92915050565b60008135905061083081610a76565b92915050565b6000806040838503121561084957600080fd5b6000610857858286016107f7565b925050602061086885828601610821565b9150509250929050565b60006020828403121561088457600080fd5b60006108928482850161080c565b91505092915050565b6000602082840312156108ad57600080fd5b60006108bb84828501610821565b91505092915050565b6108cd816109cc565b82525050565b6108dc81610a24565b82525050565b6108eb81610a0a565b82525050565b6108fa81610a14565b82525050565b600060208201905061091560008301846108c4565b92915050565b600060608201905061093060008301866108c4565b61093d60208301856108c4565b61094a60408301846108e2565b949350505050565b600060408201905061096760008301856108c4565b61097460208301846108e2565b9392505050565b600060208201905061099060008301846108d3565b92915050565b60006020820190506109ab60008301846108e2565b92915050565b60006020820190506109c660008301846108f1565b92915050565b60006109d7826109ea565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b600063ffffffff82169050919050565b6000610a2f82610a36565b9050919050565b6000610a41826109ea565b9050919050565b610a51816109cc565b8114610a5c57600080fd5b50565b610a68816109de565b8114610a7357600080fd5b50565b610a7f81610a0a565b8114610a8a57600080fd5b5056fe4f564d5f58434841494e3a206d657373656e67657220636f6e747261637420756e61757468656e746963617465644f564d5f58434841494e3a2077726f6e672073656e646572206f662063726f73732d646f6d61696e206d657373616765a2646970667358221220670d4c99ba8391ff01054cd3ac0a6e3c8afdf6ef429b5d5b4e5954d0cf228eac64736f6c63430007060033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "deposit(uint256)": {
+        "details": "deposit an amount of the ERC20 to the caller's balance on L2",
+        "params": {
+          "_amount": "Amount of the ERC20 to deposit"
+        }
+      },
+      "depositTo(address,uint256)": {
+        "details": "deposit an amount of ERC20 to a recipients's balance on L2",
+        "params": {
+          "_amount": "Amount of the ERC20 to deposit",
+          "_to": "L2 address to credit the withdrawal to"
+        }
+      },
+      "finalizeWithdrawal(address,uint256)": {
+        "details": "Complete a withdrawal from L2 to L1, and credit funds to the recipient's balance of the  L1 ERC20 token.  This call will fail if the initialized withdrawal from L2 has not been finalized. ",
+        "params": {
+          "_amount": "Amount of the ERC20 to withdraw",
+          "_to": "L1 address to credit the withdrawal to"
+        }
+      },
+      "getFinalizeDepositL2Gas()": {
+        "details": "Overridable getter for the L2 gas limit, in the case it may be dynamic, and the above public constant does not suffice."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 721,
+        "contract": "contracts/L1ERC20Gateway.sol:L1ERC20Gateway",
+        "label": "messenger",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 15,
+        "contract": "contracts/L1ERC20Gateway.sol:L1ERC20Gateway",
+        "label": "l2DepositedToken",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_address"
+      },
+      {
+        "astId": 34,
+        "contract": "contracts/L1ERC20Gateway.sol:L1ERC20Gateway",
+        "label": "DEFAULT_FINALIZE_DEPOSIT_L2_GAS",
+        "offset": 20,
+        "slot": "1",
+        "type": "t_uint32"
+      },
+      {
+        "astId": 400,
+        "contract": "contracts/L1ERC20Gateway.sol:L1ERC20Gateway",
+        "label": "l1ERC20",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_contract(iOVM_ERC20)714"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_contract(iOVM_ERC20)714": {
+        "encoding": "inplace",
+        "label": "contract iOVM_ERC20",
+        "numberOfBytes": "20"
+      },
+      "t_uint32": {
+        "encoding": "inplace",
+        "label": "uint32",
+        "numberOfBytes": "4"
+      }
+    }
+  }
+}

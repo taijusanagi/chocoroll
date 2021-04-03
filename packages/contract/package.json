@@ -1,0 +1,28 @@
+{
+  "name": "contract",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf ./cache-ovm ./cache ./artifacts-ovm ./artifacts ./deployments",
+    "deploy-l1-erc20-localhost": "hardhat deploy --tags ERC20 --network localhost_l1 --reset",
+    "deploy-l2-erc20-localhost": "TARGET=ovm hardhat deploy --tags L2DepositedERC20 --network localhost_l2 --reset",
+    "deploy-l1-erc20-gateway-localhost": "hardhat deploy --tags L1ERC20Gateway --network localhost_l1 --reset"
+  },
+  "dependencies": {
+    "@eth-optimism/contracts": "^0.1.10",
+    "@eth-optimism/plugins": "^1.0.0-alpha.2",
+    "@eth-optimism/watcher": "^0.0.1-alpha.9",
+    "@nomiclabs/hardhat-ethers": "^2.0.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/contracts": "^4.0.0",
+    "@tenderly/hardhat-tenderly": "^1.0.11",
+    "chai": "^4.2.0",
+    "chalk": "^4.1.0",
+    "ethereum-waffle": "^3.2.1",
+    "ethers": "^5.0.24",
+    "hardhat": "^2.1.2",
+    "hardhat-deploy": "^0.7.0-beta.57",
+    "mocha": "^8.2.1",
+    "ramda": "^0.27.1"
+  }
+}
