@@ -2,8 +2,8 @@ import { Watcher } from "@eth-optimism/watcher";
 import { JsonRpcProvider } from "@ethersproject/providers";
 import { ethers, Wallet } from "ethers";
 import hre from "hardhat";
-import { DEFAULT_PRIVATE_KEY } from "../helpers/constants";
-import networks from "../networks.json";
+import { DEFAULT_PRIVATE_KEY } from "../../helpers/constants";
+import networks from "../../networks.json";
 
 const main = async () => {
   const { network } = hre;

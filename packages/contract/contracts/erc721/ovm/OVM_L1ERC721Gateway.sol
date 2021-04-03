@@ -3,8 +3,8 @@ pragma solidity >0.5.0 <0.8.0;
 pragma experimental ABIEncoderV2;
 
 /* Interface Imports */
-import {iOVM_ERC721Gateway} from "./iOVM_L1ERC721Gateway.sol";
-import {Abs_ERC721Gateway} from "./Abs_L1ERC721Gateway.sol";
+import {iOVM_L1ERC721Gateway} from "./iOVM_L1ERC721Gateway.sol";
+import {Abs_L1ERC721Gateway} from "./Abs_L1ERC721Gateway.sol";
 import {IERC721} from "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 
 /**
@@ -15,7 +15,7 @@ import {IERC721} from "@openzeppelin/contracts/token/ERC721/IERC721.sol";
  * the other side, informing it of new deposits and releasing tokens when there
  * are newly finalized withdrawals.
  *
- * NOTE: This contract extends Abs_ERC721Gateway, which is where we
+ * NOTE: This contract extends Abs_L1ERC721Gateway, which is where we
  * takes care of most of the initialization and the cross-chain logic.
  * If you are looking to implement your own deposit/withdrawal contracts, you
  * may also want to extend the abstract contract in a similar manner.
@@ -23,7 +23,7 @@ import {IERC721} from "@openzeppelin/contracts/token/ERC721/IERC721.sol";
  * Compiler used: solc, optimistic-solc
  * Runtime target: EVM or OVM
  */
-contract OVM_L1ERC721Gateway is Abs_ERC721Gateway {
+contract OVM_L1ERC721Gateway is Abs_L1ERC721Gateway {
     /***************
      * Constructor *
      ***************/
@@ -37,7 +37,7 @@ contract OVM_L1ERC721Gateway is Abs_ERC721Gateway {
         address _ERC721,
         address _depositedERC721,
         address _messenger
-    ) Abs_ERC721Gateway(_ERC721, _depositedERC721, _messenger) {}
+    ) Abs_L1ERC721Gateway(_ERC721, _depositedERC721, _messenger) {}
 
     /**************
      * Accounting *

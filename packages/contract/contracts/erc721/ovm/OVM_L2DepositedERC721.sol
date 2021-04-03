@@ -4,15 +4,12 @@ pragma experimental ABIEncoderV2;
 
 /* Interface Imports */
 
-import {iOVM_ERC721Gateway} from "./iOVM_L1ERC721Gateway.sol";
+import {iOVM_L1ERC721Gateway} from "./iOVM_L1ERC721Gateway.sol";
 
-/* Contract Imports */
-
-import {ERC721URIStorage} from "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 /* Library Imports */
-import {Abs_DepositedERC721} from "./Abs_L2DepositedERC721.sol";
+import {Abs_L2DepositedERC721} from "./Abs_L2DepositedERC721.sol";
 
 /**
  * @title OVM_DepositedERC721
@@ -20,13 +17,13 @@ import {Abs_DepositedERC721} from "./Abs_L2DepositedERC721.sol";
  * This contract mints new tokens when it hears about deposits into the corresponding gateway.
  * This contract also burns the tokens intended for withdrawal, informing the gateway to release funds.
  *
- * NOTE: This contract implements the Abs_DepositedERC721 contract using OpenZeppelin's ERC20 as the implementation.
+ * NOTE: This contract implements the Abs_L2DepositedERC721 contract using OpenZeppelin's ERC20 as the implementation.
  * Alternative implementations can be used in this similar manner.
  *
  * Compiler used: optimistic-solc
  * Runtime target: OVM, EVM
  */
-contract OVM_L2DepositedERC721 is Abs_DepositedERC721, ERC721URIStorage {
+contract OVM_L2DepositedERC721 is Abs_L2DepositedERC721, ERC721 {
     /***************
      * Constructor *
      ***************/
@@ -40,7 +37,7 @@ contract OVM_L2DepositedERC721 is Abs_DepositedERC721, ERC721URIStorage {
         address _messenger,
         string memory _name,
         string memory _symbol
-    ) Abs_DepositedERC721(_messenger) ERC721(_name, _symbol) {}
+    ) Abs_L2DepositedERC721(_messenger) ERC721(_name, _symbol) {}
 
     // When a withdrawal is initiated, we burn the withdrawer's token to prevent subsequent usage.
     function _handleInitiateWithdrawal(

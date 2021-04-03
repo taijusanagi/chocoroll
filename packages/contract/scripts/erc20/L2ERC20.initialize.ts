@@ -1,6 +1,6 @@
 import hre from "hardhat";
-import { removeLayerIdFromNetworkName } from "../helpers/utils";
-import networks from "../networks.json";
+import { removeLayerIdFromNetworkName } from "../../helpers/utils";
+import networks from "../../networks.json";
 
 const main = async () => {
   const { network } = hre;

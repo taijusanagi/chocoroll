@@ -1,11 +1,11 @@
 import * as fs from "fs";
 import * as path from "path";
 
-import { LOG } from "../helpers/configs";
-import { ERC20_NAME, ERC20_SYMBOL } from "../helpers/constants";
-const filePath = "../networks.json";
-import { removeLayerIdFromNetworkName } from "../helpers/utils";
-import networks from "../networks.json";
+import { LOG } from "../../helpers/configs";
+import { ERC20_NAME, ERC20_SYMBOL } from "../../helpers/constants";
+const filePath = "../../networks.json";
+import { removeLayerIdFromNetworkName } from "../../helpers/utils";
+import networks from "../../networks.json";
 
 const func = async (hre) => {
   const { deployments, network } = hre;

@@ -11,8 +11,9 @@
     "l1ERC20Address": "0xa94ec9484bfc9ab8d3fd80eb2735f132d257a135",
     "l1ERC20GatewayAddress": "0xdcc6a1eb6ec0dab3813a485f36288e7e731dd0da",
     "l2ERC20Address": "0x754aba7ae85de79c67288957a4cbf184b210b4a1",
-    "l1ERC721GatewayAddress": "0x046cc9f34a6111568c0fd9241dfa5e2c5ebc96f3",
-    "l2ERC721Address": "0x645598a840aa148d88bb175014ecee7936c730ff",
-    "l1ERC721Address": "0x5952bffe9d6c232439e265d0e1a775bc721afa90"
+    "l1ERC721Address": "",
+    "l1ERC721GatewayAddress": "",
+    "l2ERC721Address": "",
+    "L1ERC721Address": "0xc1a31c42b4189afab345aa5ad9f6d169494e87c2"
   }
 }

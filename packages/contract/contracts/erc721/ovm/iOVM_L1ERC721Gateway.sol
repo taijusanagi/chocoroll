@@ -3,7 +3,7 @@ pragma solidity >0.5.0;
 pragma experimental ABIEncoderV2;
 
 /**
- * @title iOVM_ERC721Gateway
+ * @title iOVM_L1ERC721Gateway
  */
 interface iOVM_L1ERC721Gateway {
     /**********

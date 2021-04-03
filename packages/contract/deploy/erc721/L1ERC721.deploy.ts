@@ -1,11 +1,11 @@
 import * as fs from "fs";
 import * as path from "path";
 
-import { LOG } from "../helpers/configs";
-import { ERC20_NAME, ERC20_SYMBOL, ERC20_INITIAL_SUPPLY } from "../helpers/constants";
-const filePath = "../networks.json";
-import { removeLayerIdFromNetworkName } from "../helpers/utils";
-import networks from "../networks.json";
+import { LOG } from "../../helpers/configs";
+import { ERC721_NAME, ERC721_SYMBOL } from "../../helpers/constants";
+const filePath = "../../networks.json";
+import { removeLayerIdFromNetworkName } from "../../helpers/utils";
+import networks from "../../networks.json";
 
 const func = async (hre) => {
   const { deployments, network } = hre;
@@ -15,16 +15,16 @@ const func = async (hre) => {
   const networkName = removeLayerIdFromNetworkName(name);
   const { gasPrice, gasLimit } = networks[networkName];
   const log = LOG;
-  const { address } = await deploy("L1ERC20", {
+  const { address } = await deploy("L1ERC721", {
     from: signer.address,
-    args: [ERC20_INITIAL_SUPPLY, ERC20_NAME, ERC20_SYMBOL],
+    args: [ERC721_NAME, ERC721_SYMBOL],
     gasPrice: hre.ethers.BigNumber.from(gasPrice),
     gasLimit,
     log,
   });
-  networks[networkName].l1ERC20Address = address.toLowerCase();
+  networks[networkName].l1ERC721Address = address.toLowerCase();
   fs.writeFileSync(path.join(__dirname, filePath), JSON.stringify(networks));
   return address;
 };
-func.tags = ["L1ERC20"];
+func.tags = ["L1ERC721"];
 export default func;

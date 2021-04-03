@@ -12,7 +12,7 @@ import {
 } from "@eth-optimism/contracts/build/contracts/libraries/bridge/OVM_CrossDomainEnabled.sol";
 
 /**
- * @title Abs_DepositedERC721
+ * @title Abs_L2DepositedERC721
  * @dev An Deposited Token is a representation of funds which were deposited from the other side
  * Usually contract mints new tokens when it hears about deposits from the other side.
  * This contract also burns the tokens intended for withdrawal, informing the gateway to release the funds.
@@ -28,13 +28,13 @@ abstract contract Abs_L2DepositedERC721 is iOVM_L2DepositedERC721, OVM_CrossDoma
      * Contract Events *
      *******************/
 
-    event Initialized(iOVM_ERC721Gateway tokenGateway);
+    event Initialized(iOVM_L1ERC721Gateway tokenGateway);
 
     /********************************
      * External Contract References *
      ********************************/
 
-    iOVM_ERC721Gateway public tokenGateway;
+    iOVM_L1ERC721Gateway public tokenGateway;
 
     /********************************
      * Constructor & Initialization *
@@ -53,7 +53,7 @@ abstract contract Abs_L2DepositedERC721 is iOVM_L2DepositedERC721, OVM_CrossDoma
      * @param _tokenGateway Address of the corresponding gateway deployed to the other side
      */
 
-    function init(iOVM_ERC721Gateway _tokenGateway) public {
+    function init(iOVM_L1ERC721Gateway _tokenGateway) public {
         require(address(tokenGateway) == address(0), "Contract has already been initialized");
 
         tokenGateway = _tokenGateway;
@@ -150,7 +150,7 @@ abstract contract Abs_L2DepositedERC721 is iOVM_L2DepositedERC721, OVM_CrossDoma
         _handleInitiateWithdrawal(_to, _tokenId);
 
         // Construct calldata for ERC721Gateway.finalizeWithdrawal(_to, _tokenId)
-        bytes memory data = abi.encodeWithSelector(iOVM_ERC721Gateway.finalizeWithdrawal.selector, _to, _tokenId);
+        bytes memory data = abi.encodeWithSelector(iOVM_L1ERC721Gateway.finalizeWithdrawal.selector, _to, _tokenId);
 
         // Send message up to L1 gateway
         sendCrossDomainMessage(address(tokenGateway), data, getFinalizeWithdrawalGas());

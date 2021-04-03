@@ -3,9 +3,9 @@ pragma solidity >0.5.0 <0.8.0;
 pragma experimental ABIEncoderV2;
 
 /* Interface Imports */
-import {iOVM_ERC721Gateway} from "./iOVM_L1ERC721Gateway.sol";
-import {iOVM_DepositedERC721} from "./iOVM_L2DepositedERC721.sol";
-import {IERC721Metadata} from "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol";
+import {iOVM_L1ERC721Gateway} from "./iOVM_L1ERC721Gateway.sol";
+import {iOVM_L2DepositedERC721} from "./iOVM_L2DepositedERC721.sol";
+import {IERC721Metadata} from "@openzeppelin/contracts/token/ERC721/IERC721Metadata.sol";
 
 /* Library Imports */
 import {
@@ -13,7 +13,7 @@ import {
 } from "@eth-optimism/contracts/build/contracts/libraries/bridge/OVM_CrossDomainEnabled.sol";
 
 /**
- * @title Abs_ERC721Gateway
+ * @title Abs_L1ERC721Gateway
  * @dev An ERC721 Gateway is a contract which stores deposited ERC721 tokens that
  * are in use on the other side of the bridge.
  * It synchronizes a corresponding representation of the "deposited token" on
@@ -27,7 +27,7 @@ import {
  * Compiler used: solc, optimistic-solc
  * Runtime target: EVM or OVM
  */
-abstract contract Abs_L1ERC721Gateway is iOVM_ERC721Gateway, OVM_CrossDomainEnabled {
+abstract contract Abs_L1ERC721Gateway is iOVM_L1ERC721Gateway, OVM_CrossDomainEnabled {
     /********************************
      * External Contract References *
      ********************************/
@@ -140,7 +140,7 @@ abstract contract Abs_L1ERC721Gateway is iOVM_ERC721Gateway, OVM_CrossDomainEnab
         // Construct calldata for depositedERC721.finalizeDeposit(_to, _tokenId, _tokenURI)
         bytes memory data =
             abi.encodeWithSelector(
-                iOVM_DepositedERC721.finalizeDeposit.selector,
+                iOVM_L2DepositedERC721.finalizeDeposit.selector,
                 _to,
                 _tokenId,
                 IERC721Metadata(originalToken).tokenURI(_tokenId)
