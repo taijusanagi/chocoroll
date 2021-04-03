@@ -5,8 +5,8 @@
     "gasPrice": "0",
     "gasLimit": 8999999,
     "messengerAddress": "0x6418E5Da52A3d7543d393ADD3Fa98B0795d27736",
-    "erc20Address": "0x0dcd1bf9a1b36ce34237eeafef220932846bcd82",
-    "erc20GatewayAddress": "0x0b306bf915c4d645ff596e518faf3f9669b97016"
+    "erc20Address": "0x959922be3caee4b8cd9a407cc3ac1c251c2007b1",
+    "erc20GatewayAddress": "0x68b1d87f95878fe05b998f19b66f4baba5de1aed"
   },
   "localhost_l2": {
     "rpc": "http://localhost:9545",
@@ -14,6 +14,6 @@
     "gasPrice": "0",
     "gasLimit": 8999999,
     "messengerAddress": "0x4200000000000000000000000000000000000007",
-    "erc20Address": "0x9a676e781a523b5d0c0e43731313a708cb607508"
+    "erc20Address": "0x9a9f2ccfde556a7e9ff0848998aa4a0cfd8863ae"
   }
 }
