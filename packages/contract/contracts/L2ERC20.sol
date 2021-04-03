@@ -4,7 +4,7 @@ pragma experimental ABIEncoderV2;
 
 import {OVM_L2DepositedERC20} from "@eth-optimism/contracts/build/contracts/OVM/bridge/tokens/OVM_L2DepositedERC20.sol";
 
-contract L2DepositedERC20 is OVM_L2DepositedERC20 {
+contract L2ERC20 is OVM_L2DepositedERC20 {
     constructor(
         address _l2CrossDomainMessenger,
         string memory _name,

@@ -8,15 +8,15 @@ import { removeLayerIdFromNetworkName } from "../helpers/utils";
 import networks from "../networks.json";
 
 const func = async (hre) => {
-  const { deployments, getNamedAccounts, network } = hre;
+  const { deployments, network } = hre;
+  const [signer] = await hre.ethers.getSigners();
   const { deploy } = deployments;
-  const { deployer } = await getNamedAccounts();
   const { name } = network;
   const networkName = removeLayerIdFromNetworkName(name);
   const { gasPrice, gasLimit } = networks[networkName];
   const log = LOG;
-  const { address } = await deploy("L2DepositedERC20", {
-    from: deployer,
+  const { address } = await deploy("L2ERC20", {
+    from: signer.address,
     args: [networks.localhost.l2MessengerAddress, ERC20_NAME, ERC20_SYMBOL],
     gasPrice: hre.ethers.BigNumber.from(gasPrice),
     gasLimit,

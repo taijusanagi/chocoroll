@@ -1,16 +1,15 @@
 {
   "localhost": {
-    "l1Rpc": "http://localhost:9545",
-    "l2Rpc": "http://localhost:8545",
+    "l1RpcUrl": "http://127.0.0.1:9545",
+    "l2RpcUrl": "http://127.0.0.1:8545",
     "l1ChainId": "31337",
     "l2ChainId": "420",
     "gasPrice": "0",
     "gasLimit": 8999999,
     "l1MessengerAddress": "0x6418E5Da52A3d7543d393ADD3Fa98B0795d27736",
     "l2MessengerAddress": "0x4200000000000000000000000000000000000007",
-    "l1ERC20Address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
-    "l1ERC20GatewayAddress": "0x68b1d87f95878fe05b998f19b66f4baba5de1aed",
-    "l2ERC20Address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
-    "l1Rrc20GatewayAddress": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512"
+    "l1ERC20Address": "0xa90220073288e02b20b32be88a04e44ab1c67b64",
+    "l1ERC20GatewayAddress": "0x2b57c4ab6d64a2befcb67d46bdc302809418bd1c",
+    "l2ERC20Address": "0x9f800770150c79d2165dfd44750d30e973445249"
   }
 }

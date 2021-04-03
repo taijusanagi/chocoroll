@@ -15,19 +15,14 @@ import networks from "./networks.json";
 module.exports = {
   networks: {
     localhost_l1: {
-      url: networks.localhost.l1Rpc,
-      accounts,
+      url: networks.localhost.l1RpcUrl,
     },
     localhost_l2: {
-      url: networks.localhost.l2Rpc,
-      accounts,
+      url: networks.localhost.l2RpcUrl,
     },
   },
   solidity: "0.7.6",
   ovm: {
     solcVersion: "0.7.6",
-  },
-  namedAccounts: {
-    deployer: 0,
   },
 };
