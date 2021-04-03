@@ -5,9 +5,10 @@
   "scripts": {
     "clean": "rimraf ./cache-ovm ./cache ./artifacts-ovm ./artifacts ./deployments",
     "deploy-localhost": "run-s deploy-localhost:*",
-    "deploy-localhost:l1-erc20": "hardhat deploy --tags ERC20 --network localhost_l1 --reset",
-    "deploy-localhost:l2-erc20": "TARGET=ovm hardhat deploy --tags L2DepositedERC20 --network localhost_l2 --reset",
-    "deploy-localhost:l1-erc20-gateway": "hardhat deploy --tags L1ERC20Gateway --network localhost_l1 --reset"
+    "deploy-localhost:L1ERC20": "hardhat deploy --tags L1ERC20 --network localhost_l1 --reset",
+    "deploy-localhost:L2ERC20": "TARGET=ovm hardhat deploy --tags L2ERC20 --network localhost_l2 --reset",
+    "deploy-localhost:L1ERC20Gateway": "hardhat deploy --tags L1ERC20Gateway --network localhost_l1 --reset",
+    "test-bridge-localhost": "hardhat test test/bridge.spec.ts"
   },
   "dependencies": {
     "@eth-optimism/contracts": "^0.1.10",

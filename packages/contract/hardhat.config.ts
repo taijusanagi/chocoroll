@@ -15,11 +15,11 @@ import networks from "./networks.json";
 module.exports = {
   networks: {
     localhost_l1: {
-      url: networks.localhost_l1.rpc,
+      url: networks.localhost.l1Rpc,
       accounts,
     },
     localhost_l2: {
-      url: networks.localhost_l1.rpc,
+      url: networks.localhost.l2Rpc,
       accounts,
     },
   },
