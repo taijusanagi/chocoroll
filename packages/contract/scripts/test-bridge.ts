@@ -1,13 +1,13 @@
 import { Watcher } from "@eth-optimism/watcher";
 import { JsonRpcProvider } from "@ethersproject/providers";
-import { ethers, Wallet } from "ethers";
 import hre from "hardhat";
-import { DEFAULT_PRIVATE_KEY } from "../../helpers/constants";
-import networks from "../../networks.json";
+import { removeLayerIdFromNetworkName, getSigner } from "../helpers/utils";
+import networks from "../networks.json";
 
 const main = async () => {
   const { network } = hre;
   const { name } = network;
+  const networkName = removeLayerIdFromNetworkName(name);
   const {
     l1RpcUrl,
     l2RpcUrl,
@@ -16,11 +16,15 @@ const main = async () => {
     l1ERC721Address,
     l1ERC721GatewayAddress,
     l2ERC721Address,
-  } = networks[name];
+    gasLimit,
+    l1GasPrice,
+    l2GasPrice,
+  } = networks[networkName];
   const l1Provider = new JsonRpcProvider(l1RpcUrl);
   const l2Provider = new JsonRpcProvider(l2RpcUrl);
-  const l1Signer = new Wallet(DEFAULT_PRIVATE_KEY, l1Provider);
-  const l2Signer = new Wallet(DEFAULT_PRIVATE_KEY, l2Provider);
+  const l1Signer = getSigner(l1Provider);
+  const l2Signer = getSigner(l2Provider);
+
   const l1SignerAddress = await l1Signer.getAddress();
   const watcher = new Watcher({
     l1: {
@@ -32,6 +36,7 @@ const main = async () => {
       messengerAddress: l2MessengerAddress,
     },
   });
+
   const l1ERC721 = await hre.ethers.getContractAt("L1ERC721", l1ERC721Address, l1Signer);
   const l1ERC721Gateway = await hre.ethers.getContractAt("L1ERC721Gateway", l1ERC721GatewayAddress, l1Signer);
   const l2ERC721 = await hre.ethers.getContractAt("L2ERC721", l2ERC721Address, l2Signer);
@@ -46,14 +51,15 @@ const main = async () => {
   };
 
   console.log("Approving L1 deposit contract...");
-  const approveTx = await l1ERC721.setApprovalForAll(l1ERC721Gateway.address, true);
+  const approveTx = await l1ERC721.setApprovalForAll(l1ERC721Gateway.address, true, { gasLimit, gasPrice: l1GasPrice });
+  await approveTx.wait();
   console.log("Approved:" + approveTx.hash);
   await logBalances();
 
   console.log("Depositing into L1 deposit contract...");
-  const depositTx = await l1ERC721Gateway.deposit(1, { gasLimit: 1000000 });
-  console.log("Deposited:" + depositTx.hash);
+  const depositTx = await l1ERC721Gateway.deposit(1, { gasLimit, gasPrice: l1GasPrice });
   await depositTx.wait();
+  console.log("Deposited:" + depositTx.hash);
   const [l1ToL2msgHash] = await watcher.getMessageHashesFromL1Tx(depositTx.hash);
   console.log("got L1->L2 message hash", l1ToL2msgHash);
   const l2Receipt = await watcher.getL2TransactionReceipt(l1ToL2msgHash);
@@ -61,7 +67,7 @@ const main = async () => {
   await logBalances();
 
   console.log("Withdrawing from L1 deposit contract...");
-  const withdrawalTx = await l2ERC721.withdraw(1, { gasLimit: 5000000 });
+  const withdrawalTx = await l2ERC721.withdraw(1, { gasLimit, gasPrice: l2GasPrice });
   await withdrawalTx.wait();
   console.log("Withdrawal tx hash:" + withdrawalTx.hash);
   await logBalances();

@@ -2,17 +2,25 @@
   "localhost": {
     "l1RpcUrl": "http://127.0.0.1:9545",
     "l2RpcUrl": "http://127.0.0.1:8545",
-    "l1ChainId": "31337",
-    "l2ChainId": "420",
-    "gasPrice": "0",
+    "l1GasPrice": "0",
+    "l2GasPrice": "0",
     "gasLimit": 8999999,
     "l1MessengerAddress": "0x6418E5Da52A3d7543d393ADD3Fa98B0795d27736",
     "l2MessengerAddress": "0x4200000000000000000000000000000000000007",
-    "l1ERC20Address": "0xa94ec9484bfc9ab8d3fd80eb2735f132d257a135",
-    "l1ERC20GatewayAddress": "0xdcc6a1eb6ec0dab3813a485f36288e7e731dd0da",
-    "l2ERC20Address": "0x754aba7ae85de79c67288957a4cbf184b210b4a1",
-    "l1ERC721GatewayAddress": "0x046cc9f34a6111568c0fd9241dfa5e2c5ebc96f3",
-    "l2ERC721Address": "0x645598a840aa148d88bb175014ecee7936c730ff",
-    "l1ERC721Address": "0x5952bffe9d6c232439e265d0e1a775bc721afa90"
+    "l1ERC721GatewayAddress": "0xf3b854c226c72e99a251c285b5c67e343323a8c2",
+    "l2ERC721Address": "0x6197d6d561de3db4baceaeab2c63037060b8b2e0",
+    "l1ERC721Address": "0x7cd29c50908154dfb1b8320f3e39d2726f9ba0a2"
+  },
+  "kovan": {
+    "l1RpcUrl": "https://kovan.infura.io/v3/eedaad734dce46a4b08816a7f6df0b9b",
+    "l2RpcUrl": "https://kovan.optimism.io",
+    "l1GasPrice": "1000000000",
+    "l2GasPrice": "0",
+    "gasLimit": 8999999,
+    "l1MessengerAddress": "0xb89065D5eB05Cac554FDB11fC764C679b4202322",
+    "l2MessengerAddress": "0x4200000000000000000000000000000000000007",
+    "l1ERC721GatewayAddress": "0xfceb3efc43f99ad6513c975512be8948904a46de",
+    "l2ERC721Address": "0x4d467eabfd46d2c09357a14b1ec6955a626c67ce",
+    "l1ERC721Address": "0x17300d48a4fec43fa52e23b8d287340565289a72"
   }
 }

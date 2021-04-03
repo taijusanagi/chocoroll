@@ -5,7 +5,7 @@ import "@tenderly/hardhat-tenderly";
 import "hardhat-deploy";
 
 import { DEFAULT_MNEMONIC } from "./helpers/constants";
-const mnemonic = DEFAULT_MNEMONIC;
+const mnemonic = process.env.MNEMONIC ? process.env.MNEMONIC : DEFAULT_MNEMONIC;
 const accounts = {
   mnemonic,
 };
@@ -16,9 +16,19 @@ module.exports = {
   networks: {
     localhost_l1: {
       url: networks.localhost.l1RpcUrl,
+      accounts,
     },
     localhost_l2: {
       url: networks.localhost.l2RpcUrl,
+      accounts,
+    },
+    kovan_l1: {
+      url: networks.kovan.l1RpcUrl,
+      accounts,
+    },
+    kovan_l2: {
+      url: networks.kovan.l2RpcUrl,
+      accounts,
     },
   },
   solidity: "0.7.6",

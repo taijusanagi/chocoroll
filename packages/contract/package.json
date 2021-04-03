@@ -4,18 +4,18 @@
   "license": "MIT",
   "scripts": {
     "clean": "rimraf ./cache-ovm ./cache ./artifacts-ovm ./artifacts ./deployments",
-    "deploy-erc20-localhost": "run-s deploy-erc20-localhost:*",
-    "deploy-erc20-localhost:L1ERC20": "hardhat deploy --tags L1ERC20 --network localhost_l1 --reset",
-    "deploy-erc20-localhost:L2ERC20": "TARGET=ovm hardhat deploy --tags L2ERC20 --network localhost_l2 --reset",
-    "deploy-erc20-localhost:L1ERC20Gateway": "hardhat deploy --tags L1ERC20Gateway --network localhost_l1 --reset",
-    "deploy-erc20-localhost:initialize-L2ERC20": "hardhat run scripts/erc20/L2ERC20.initialize.ts --network localhost",
-    "test-erc-20-bridge-localhost": "hardhat run scripts/erc20/test-bridge-localhost.ts --network localhost",
     "deploy-erc721-localhost": "run-s deploy-erc721-localhost:*",
     "deploy-erc721-localhost:L1ERC721": "hardhat deploy --tags L1ERC721 --network localhost_l1 --reset",
     "deploy-erc721-localhost:L2ERC721": "TARGET=ovm hardhat deploy --tags L2ERC721 --network localhost_l2 --reset",
     "deploy-erc721-localhost:L1ERC721Gateway": "hardhat deploy --tags L1ERC721Gateway --network localhost_l1 --reset",
-    "deploy-erc721-localhost:initialize-L2ERC721": "hardhat run scripts/erc721/L2ERC721.initialize.ts --network localhost",
-    "test-erc-721-bridge-localhost": "hardhat run scripts/erc721/test-bridge-localhost.ts --network localhost"
+    "deploy-erc721-localhost:initialize-L2ERC721": "hardhat run scripts/L2ERC721.initialize.ts --network localhost_l2",
+    "test-erc-721-bridge-localhost": "hardhat run scripts/test-bridge.ts --network localhost_l1",
+    "deploy-erc721-kovan": "run-s deploy-erc721-kovan:*",
+    "deploy-erc721-kovan:L1ERC721": "hardhat deploy --tags L1ERC721 --network kovan_l1 --reset",
+    "deploy-erc721-kovan:L2ERC721": "TARGET=ovm hardhat deploy --tags L2ERC721 --network kovan_l2 --reset",
+    "deploy-erc721-kovan:L1ERC721Gateway": "hardhat deploy --tags L1ERC721Gateway --network kovan_l1 --reset",
+    "deploy-erc721-kovan:initialize-L2ERC721": "hardhat run scripts/L2ERC721.initialize.ts --network kovan_l2",
+    "test-erc-721-bridge-kovan": "hardhat run scripts/test-bridge.ts --network kovan_l1"
   },
   "dependencies": {
     "@eth-optimism/contracts": "^0.1.10",
