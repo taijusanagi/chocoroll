@@ -145,7 +145,6 @@ abstract contract Abs_L1ERC721Gateway is iOVM_L1ERC721Gateway, OVM_CrossDomainEn
                 _tokenId,
                 IERC721Metadata(originalToken).tokenURI(_tokenId)
             );
-
         // Send calldata into L2
         sendCrossDomainMessage(depositedToken, data, getFinalizeDepositGas());
 

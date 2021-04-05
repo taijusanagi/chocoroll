@@ -17,10 +17,10 @@
     "l1GasPrice": "1000000000",
     "l2GasPrice": "0",
     "gasLimit": 8999999,
-    "l1MessengerAddress": "0x0457fF3b3a859e9AEe0Ee0D30B2b1f40E4bdCd8b",
+    "l1MessengerAddress": "0x1AEBb01c32726f2fD2a75da8913BCA63c87e68D4",
     "l2MessengerAddress": "0x4200000000000000000000000000000000000007",
-    "l1ERC721GatewayAddress": "0xb3230dc7a6662490857f5702de3f1ee1607c512b",
-    "l2ERC721Address": "0x6197d6d561de3db4baceaeab2c63037060b8b2e0",
-    "l1ERC721Address": "0x1f063c790b034db3bfe59ac8aa36c755997969ca"
+    "l1ERC721GatewayAddress": "0x37e2c9d4a0fcdd883479303e6b9994aa798022c8",
+    "l2ERC721Address": "0x1539c84c074701a5a559d802c8eba2ac496d4961",
+    "l1ERC721Address": "0x2e1113ab8f4059075caaae73eaf192d1fce57c65"
   }
 }
