@@ -47,36 +47,43 @@ const main = async () => {
     console.log("L1 balance of", l1SignerAddress, "is", l1Balance.toString());
     const l2Balance = await l2ERC721.balanceOf(l1SignerAddress);
     console.log("L2 balance of", l1SignerAddress, "is", l2Balance.toString());
+    const l2Balance = await l2ERC721.balanceOf(l1SignerAddress);
+    console.log("L2 balance of", l1SignerAddress, "is", l2Balance.toString());
     console.log("-----");
   };
 
-  console.log("Approving L1 deposit contract...");
-  const approveTx = await l1ERC721.setApprovalForAll(l1ERC721Gateway.address, true, { gasLimit, gasPrice: l1GasPrice });
-  await approveTx.wait();
-  console.log("Approved:" + approveTx.hash);
-  await logBalances();
+  // console.log("Approving L1 deposit contract...");
+  // const approveTx = await l1ERC721.setApprovalForAll(l1ERC721Gateway.address, true, { gasLimit, gasPrice: l1GasPrice });
+  // await approveTx.wait();
+  // console.log("Approved:" + approveTx.hash);
+  // await logBalances();
 
-  console.log("Depositing into L1 deposit contract...");
-  const depositTx = await l1ERC721Gateway.deposit(1, { gasLimit, gasPrice: l1GasPrice });
-  await depositTx.wait();
-  console.log("Deposited:" + depositTx.hash);
-  const [l1ToL2msgHash] = await watcher.getMessageHashesFromL1Tx(depositTx.hash);
-  console.log("got L1->L2 message hash", l1ToL2msgHash);
-  const l2Receipt = await watcher.getL2TransactionReceipt(l1ToL2msgHash);
-  console.log("completed Deposit! L2 tx hash:", l2Receipt.transactionHash);
-  await logBalances();
+  // console.log("Depositing into L1 deposit contract...");
+  // const depositTx = await l1ERC721Gateway.deposit(1, { gasLimit, gasPrice: l1GasPrice });
+  // await depositTx.wait();
+  // console.log("Deposited:" + depositTx.hash);
+  // const [l1ToL2msgHash] = await watcher.getMessageHashesFromL1Tx(depositTx.hash);
+  // console.log("got L1->L2 message hash", l1ToL2msgHash);
+  // const l2Receipt = await watcher.getL2TransactionReceipt(l1ToL2msgHash);
+  // console.log("completed Deposit! L2 tx hash:", l2Receipt.transactionHash);
+  // await logBalances();
 
-  console.log("Withdrawing from L1 deposit contract...");
-  const withdrawalTx = await l2ERC721.withdraw(1, { gasLimit, gasPrice: l2GasPrice });
-  await withdrawalTx.wait();
-  console.log("Withdrawal tx hash:" + withdrawalTx.hash);
-  await logBalances();
+  // console.log("Withdrawing from L1 deposit contract...");
+  // const withdrawalTx = await l2ERC721.withdraw(1, { gasLimit, gasPrice: l2GasPrice });
+  // await withdrawalTx.wait();
+  // console.log("Withdrawal tx hash:" + withdrawalTx.hash);
+  // await logBalances();
 
-  const [l2ToL1msgHash] = await watcher.getMessageHashesFromL2Tx(withdrawalTx.hash);
+  // const [l2ToL1msgHash] = await watcher.getMessageHashesFromL2Tx(withdrawalTx.hash);
+  await logBalances();
+  const hash = "0xda7bfc94f8c653e2d8255f71dd52fa20a493c5e23c1c8572af033a5de2dd5154";
+  const [l2ToL1msgHash] = await watcher.getMessageHashesFromL2Tx(hash);
   console.log("got L2->L1 message hash", l2ToL1msgHash);
   const l1Receipt = await watcher.getL1TransactionReceipt(l2ToL1msgHash);
   console.log("completed Withdrawal! L1 tx hash:", l1Receipt.transactionHash);
   await logBalances();
+
+  // return;
 };
 
 main()

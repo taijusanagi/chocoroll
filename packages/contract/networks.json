@@ -7,9 +7,9 @@
     "gasLimit": 8999999,
     "l1MessengerAddress": "0x6418E5Da52A3d7543d393ADD3Fa98B0795d27736",
     "l2MessengerAddress": "0x4200000000000000000000000000000000000007",
-    "l1ERC721GatewayAddress": "0xf3b854c226c72e99a251c285b5c67e343323a8c2",
+    "l1ERC721GatewayAddress": "0x7cd29c50908154dfb1b8320f3e39d2726f9ba0a2",
     "l2ERC721Address": "0x6197d6d561de3db4baceaeab2c63037060b8b2e0",
-    "l1ERC721Address": "0x7cd29c50908154dfb1b8320f3e39d2726f9ba0a2"
+    "l1ERC721Address": "0x1539c84c074701a5a559d802c8eba2ac496d4961"
   },
   "kovan": {
     "l1RpcUrl": "https://kovan.infura.io/v3/eedaad734dce46a4b08816a7f6df0b9b",
@@ -17,10 +17,10 @@
     "l1GasPrice": "1000000000",
     "l2GasPrice": "0",
     "gasLimit": 8999999,
-    "l1MessengerAddress": "0x1AEBb01c32726f2fD2a75da8913BCA63c87e68D4",
+    "l1MessengerAddress": "0xE37AB1512E086aDd8cAD2B9c3156aF08db031b2c",
     "l2MessengerAddress": "0x4200000000000000000000000000000000000007",
-    "l1ERC721GatewayAddress": "0x37e2c9d4a0fcdd883479303e6b9994aa798022c8",
-    "l2ERC721Address": "0x1539c84c074701a5a559d802c8eba2ac496d4961",
-    "l1ERC721Address": "0x2e1113ab8f4059075caaae73eaf192d1fce57c65"
+    "l1ERC721GatewayAddress": "0x55861c9064544421f91c1cff7fbfad3399644501",
+    "l2ERC721Address": "0x6197d6d561de3db4baceaeab2c63037060b8b2e0",
+    "l1ERC721Address": "0x0e65db2d54951e88622fe35ee27dd1ce50678502"
   }
 }

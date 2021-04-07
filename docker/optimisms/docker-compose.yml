@@ -18,5 +18,13 @@ services:
     env_file:
       - docker-compose.env
 
+  data_transport_layer:
+    image: ethereumoptimism/data-transport-layer:latest
+    restart: unless-stopped
+    env_file:
+      - docker-compose.env
+    ports:
+      - 7878:7878
+
 volumes:
   geth:
